@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_gravity="center"
-            android:padding="1dp"
             android:contentDescription="@string/spot_image"
+            android:padding="1dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
         <!-- Image Frame -->
