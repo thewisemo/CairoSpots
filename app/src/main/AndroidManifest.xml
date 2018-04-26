@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.android.cairospots">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:logo="@drawable/cs_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MuseumsActivity"
+            android:label="Museums"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".GreenActivity"
+            android:label="Green"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:label="Food"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PlayActivity"
+            android:label="Play"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MuseumsDetailsActivity"
+            android:label="Details"
+            android:parentActivityName=".MuseumsActivity"
+            android:theme="@style/DetailsTheme"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MuseumsActivity" />
+        </activity>
+        <activity
+            android:name=".FoodDetailsActivity"
+            android:label="Details"
+            android:parentActivityName=".FoodActivity"
+            android:theme="@style/DetailsTheme"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FoodActivity" />
+        </activity>
+        <activity
+            android:name=".GreenDetailsActivity"
+            android:label="Details"
+            android:parentActivityName=".GreenActivity"
+            android:theme="@style/DetailsTheme"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GreenActivity" />
+        </activity>
+        <activity android:name=".PlayDetailsActivity"
+            android:label="Details"
+            android:parentActivityName=".PlayActivity"
+            android:theme="@style/DetailsTheme"
+            tools:targetApi="jelly_bean">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PlayActivity" />
+        </activity>
+    </application>
+
+</manifest>

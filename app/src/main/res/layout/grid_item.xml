@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!-- Start spot Image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:contentDescription="@string/spot_image"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+        <!-- Image Frame -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/spot_image_frame"
+            android:src="@drawable/spot_item_image_frame" />
+        <!-- End spot Image -->
+    </FrameLayout>
+    <!-- Spot Name -->
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/SpotTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spot_item_name_bg"
+        android:padding="12dp"
+        tools:text="spot name" />
+
+</LinearLayout>
