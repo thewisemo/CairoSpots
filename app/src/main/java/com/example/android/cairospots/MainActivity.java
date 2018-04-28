@@ -1,21 +1,20 @@
 package com.example.android.cairospots;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,20 +22,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Create an object to the tool bar and assign it to the id in the activity_main.xml THEN
-        // set the suport to it as an action bar.
+        // Create an object to the bottom tool bar and assign it to the id in the activity_main.xml THEN
+        // set the support to it as an action bar.
         Toolbar toolbar = findViewById(R.id.tool_bar_bottom_view);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() !=null)
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         // Viewpager object
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         // New adapter object
         SpotFragmentPagerAdapter adapter = new SpotFragmentPagerAdapter(getSupportFragmentManager());
         // Setting the FragmentPagerAdapter to the viewPager.
         viewPager.setAdapter(adapter);
         // Give the TabLayout the ViewPager
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
     // @Override the onCreateOptionsMenu method to inflate the tool_bar_menu.xml resource for the toolbar menu THEN

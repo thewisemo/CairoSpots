@@ -9,7 +9,7 @@
     android:fitsSystemWindows="true">
     <!-- Start AppBar widget -->
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:fitsSystemWindows="true"

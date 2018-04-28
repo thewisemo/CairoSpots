@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SpotFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 4;
-    private String tabTitles[] = new String[] { "Museums", "Green", "Food", "Play" };
+    private String tabTitles[] = new String[]{"Historic", "Green", "Food", "Play"};
     private Context context;
     // The constructor
     public SpotFragmentPagerAdapter(FragmentManager fm) {
