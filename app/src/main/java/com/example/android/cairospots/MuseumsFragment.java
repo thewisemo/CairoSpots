@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -30,9 +29,9 @@ public class MuseumsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.spot_grid_one_colum, container, false);
         // Create a list of museumsSpots
         final ArrayList<Spot> museumsSpots = new ArrayList<>();
-        museumsSpots.add(new Spot("Museum 1", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        museumsSpots.add(new Spot("Giza Pyramids", R.string.dummy_description,
+                R.drawable.drawable_historic_pyramids, "9 AM : 5 PM",
+                2, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
         museumsSpots.add(new Spot("Museum 2", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
@@ -42,27 +41,27 @@ public class MuseumsFragment extends Fragment {
         museumsSpots.add(new Spot("Museum 4", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 1", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 5", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 2", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 6", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 3", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 7", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
                 15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 4", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 8", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));museumsSpots.add(new Spot("Museum 1", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 2", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 9", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 3", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 10", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
                 15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 4", R.string.dummy_description,
+        museumsSpots.add(new Spot("Museum 11", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
         // Create an {@link SpotAdapter}, whose data source is a list of {@link Spot}s. The
@@ -84,6 +83,7 @@ public class MuseumsFragment extends Fragment {
                 intent.putExtra("SpotImage", museumSpot.getImageUrl());
                 intent.putExtra("SpotName", museumSpot.getSpotName());
                 intent.putExtra("ShortDescription", museumSpot.getShortDescription());
+                intent.putExtra("DrawableImage", museumSpot.getImageResourceId());
                 intent.putExtra("AccsessTime", museumSpot.getOpeningHours());
                 intent.putExtra("TicketPrice", museumSpot.getTicketPrice());
                 intent.putExtra("SpotLocation", museumSpot.getMapLocation());

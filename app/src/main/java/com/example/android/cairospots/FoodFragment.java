@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -31,9 +30,9 @@ public class FoodFragment extends Fragment {
 
         // Create a list of foodSpots
         final ArrayList<Spot> foodSpots = new ArrayList<>();
-        foodSpots.add(new Spot("Food 1", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        foodSpots.add(new Spot("Kebdet El Prince", R.string.dummy_description,
+                R.drawable.drawable_food_el_prince, "1 PM : 1 AM",
+                2, "http://maps.google.com/maps?daddr=30.0806262, 31.2188924,15z"));
         foodSpots.add(new Spot("Food 2", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
@@ -43,28 +42,28 @@ public class FoodFragment extends Fragment {
         foodSpots.add(new Spot("Food 4", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 1", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 5", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 2", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 6", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 3", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 7", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
                 15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 4", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 8", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 1", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 9", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 2", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 10", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 3", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 11", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
                 15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        foodSpots.add(new Spot("Food 4", R.string.dummy_description,
+        foodSpots.add(new Spot("Food 12", R.string.dummy_description,
                 "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
                 10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
         // Create an {@link SpotAdapter}, whose data source is a list of {@link Spot}s. The
@@ -86,6 +85,7 @@ public class FoodFragment extends Fragment {
                 intent.putExtra("SpotImage", foodSpot.getImageUrl());
                 intent.putExtra("SpotName", foodSpot.getSpotName());
                 intent.putExtra("ShortDescription", foodSpot.getShortDescription());
+                intent.putExtra("DrawableImage", foodSpot.getImageResourceId());
                 intent.putExtra("AccsessTime", foodSpot.getOpeningHours());
                 intent.putExtra("TicketPrice", foodSpot.getTicketPrice());
                 intent.putExtra("SpotLocation", foodSpot.getMapLocation());

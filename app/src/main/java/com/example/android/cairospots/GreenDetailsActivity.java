@@ -42,6 +42,7 @@ public class GreenDetailsActivity extends AppCompatActivity {
         String image = intent.getStringExtra("SpotImage");
         String spotName = intent.getStringExtra("SpotName");
         Integer description = intent.getIntExtra("ShortDescription", 0);
+        Integer drawableImage = intent.getIntExtra("DrawableImage", 0);
         String accessTime = intent.getStringExtra("AccsessTime");
         Integer ticketPrice = intent.getIntExtra("TicketPrice", 0);
         final String spotLocation = intent.getStringExtra("SpotLocation");
@@ -65,6 +66,7 @@ public class GreenDetailsActivity extends AppCompatActivity {
         shortDescription.setText(description);
         accessTimeTv.setText(accessTime);
         ticketPriceTv.setText(String.valueOf(ticketPrice));
+        spotImage.setImageResource(drawableImage);
         //set the title of this activity to be the street name
         getSupportActionBar().setTitle(spotName);
     }

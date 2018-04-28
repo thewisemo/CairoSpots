@@ -3,7 +3,6 @@ package com.example.android.cairospots;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,21 +51,20 @@ public class SpotAdapter extends ArrayAdapter<Spot> {
         Spot currentSpot = getItem(position);
         // Get the Spot name from the currentSpot object and set this text on
         // the name TextView.
-        TextView spotName = (TextView) gridItemView.findViewById(R.id.name_tv);
+        TextView spotName = gridItemView.findViewById(R.id.name_tv);
         assert currentSpot != null;
         spotName.setText(currentSpot.getSpotName());
-//        int color = ContextCompat.getColor(getContext(), mBackGroundColor);
-//        // To change the background color for each category
-//        spotName.setBackgroundColor(color);
         // Get the Spot image from the currentSpot object and set the image on
         // the image ImageView.
-        ImageView spotImage = (ImageView) gridItemView.findViewById(R.id.image_iv);
-//        spotImage.setImageResource(currentSpot.getImageResourceId());
-        // Glide
-        Glide.with(getContext())
-                .asBitmap()
-                .load(currentSpot.getImageUrl())
-                .into(spotImage);
+        ImageView spotImage = gridItemView.findViewById(R.id.image_iv);
+        spotImage.setImageResource(currentSpot.getImageResourceId());
+        if (currentSpot.getImageResourceId() == 0) {
+            // Glide
+            Glide.with(getContext())
+                    .asBitmap()
+                    .load(currentSpot.getImageUrl())
+                    .into(spotImage);
+        }
         // Return the whole list item layout (containing image & text views) so that it can be shown in
         // the GridView.
         return gridItemView;

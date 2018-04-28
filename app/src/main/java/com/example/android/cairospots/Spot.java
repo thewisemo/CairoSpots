@@ -7,14 +7,26 @@ public class Spot implements Parcelable {
     private String mSpotName;
     private int mShortDescription;
     private String mImageUrl;
+    private int mImageResourceId;
     private String mOpeningHours;
     private int mTicketPrice;
     private String mMapLocation;
 
+    // Constructor for web URL image resource
     public Spot (String spotName, int shortDescription, String imageUrl, String openingHours, int ticketPrice, String mapLocation) {
         mSpotName = spotName;
         mShortDescription = shortDescription;
         mImageUrl = imageUrl;
+        mOpeningHours = openingHours;
+        mTicketPrice = ticketPrice;
+        mMapLocation = mapLocation;
+    }
+
+    // Constructor for drawable image resource
+    public Spot(String spotName, int shortDescription, int imageResourceId, String openingHours, int ticketPrice, String mapLocation) {
+        mSpotName = spotName;
+        mShortDescription = shortDescription;
+        mImageResourceId = imageResourceId;
         mOpeningHours = openingHours;
         mTicketPrice = ticketPrice;
         mMapLocation = mapLocation;
@@ -32,6 +44,20 @@ public class Spot implements Parcelable {
         return mImageUrl;
     }
 
+    /*
+     * This method is the constructor, called on the receiving activity, where we will be collecting values.
+     * constructor used for parcel.
+     */
+    public Spot(Parcel parcel) {
+        mSpotName = parcel.readString();
+        mShortDescription = parcel.readInt();
+        mImageUrl = parcel.readString();
+        mImageResourceId = parcel.readInt();
+        mOpeningHours = parcel.readString();
+        mTicketPrice = parcel.readInt();
+        mMapLocation = parcel.readString();
+    }
+
     public String getOpeningHours() { return mOpeningHours;}
 
     public int getTicketPrice() { return mTicketPrice;}
@@ -44,25 +70,18 @@ public class Spot implements Parcelable {
     * write object values to parcel for storage
     */
 
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
+
     public void writeToParcel(Parcel dest, int flags){
         dest.writeString(mSpotName);
         dest.writeInt(mShortDescription);
         dest.writeString(mImageUrl);
+        dest.writeInt(mImageResourceId);
         dest.writeString(mOpeningHours);
         dest.writeInt(mTicketPrice);
         dest.writeString(mMapLocation);
-    }
-    /*
-    * This method is the constructor, called on the receiving activity, where we will be collecting values.
-    * constructor used for parcel.
-    */
-    public Spot(Parcel parcel){
-        mSpotName = parcel.readString();
-        mShortDescription = parcel.readInt();
-        mImageUrl = parcel.readString();
-        mOpeningHours = parcel.readString();
-        mTicketPrice = parcel.readInt();
-        mMapLocation = parcel.readString();
     }
 
     //creator - used when un-parceling our parcle (creating the object)
