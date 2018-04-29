@@ -28,4 +28,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">Developed by the WISEMO</string>
+    <string name="elprince">Kebdet El Prince</string>
+    <string name="dummy_opening_hours">1 PM : 1 AM</string>
+    <string name="dummy_food_name">Dummy Food Name</string>
+    <string name="azhar_park">Al Azhar Park</string>
+    <string name="dummy_green_name">Dummy Green Name</string>
+    <string name="giza_pyramids">Giza Pyramids</string>
+    <string name="dummy_historic_name">Dummy Historic Name</string>
+    <string name="dream_park">Dream Park</string>
+    <string name="dummy_play_name">Play 2</string>
 </resources>

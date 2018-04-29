@@ -29,41 +29,24 @@ public class MuseumsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.spot_grid_one_colum, container, false);
         // Create a list of museumsSpots
         final ArrayList<Spot> museumsSpots = new ArrayList<>();
-        museumsSpots.add(new Spot("Giza Pyramids", R.string.dummy_description,
-                R.drawable.drawable_historic_pyramids, "9 AM : 5 PM",
+        museumsSpots.add(new Spot(getString(R.string.giza_pyramids), R.string.dummy_description,
+                R.drawable.drawable_historic_pyramids, getString(R.string.dummy_opening_hours),
                 2, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 2", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
-                20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 3", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
+        museumsSpots.add(new Spot(getString(R.string.dummy_historic_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", getString(R.string.dummy_opening_hours),
+                30, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        museumsSpots.add(new Spot(getString(R.string.dummy_historic_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", getString(R.string.dummy_opening_hours),
+                40, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        museumsSpots.add(new Spot(getString(R.string.dummy_historic_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", getString(R.string.dummy_opening_hours),
+                25, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        museumsSpots.add(new Spot(getString(R.string.dummy_historic_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", getString(R.string.dummy_opening_hours),
                 15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 4", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 5", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 6", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
-                20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 7", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
-                15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 8", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));museumsSpots.add(new Spot("Museum 1", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 9", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
-                20,"http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 10", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
-                15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        museumsSpots.add(new Spot("Museum 11", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        museumsSpots.add(new Spot(getString(R.string.dummy_historic_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", getString(R.string.dummy_opening_hours),
+                24, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
         // Create an {@link SpotAdapter}, whose data source is a list of {@link Spot}s. The
         // adapter knows how to create list items for each item in the list.
         SpotAdapter adapter = new SpotAdapter(getActivity(), museumsSpots);

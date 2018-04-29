@@ -30,42 +30,24 @@ public class GreenFragment extends Fragment {
 
         // Create a list of greenSpots
         final ArrayList<Spot> greenSpots = new ArrayList<>();
-        greenSpots.add(new Spot("Al Azhar Park", R.string.dummy_description,
-                R.drawable.drawable_green_azhar_park, "10 AM : 7 PM",
+        greenSpots.add(new Spot(getString(R.string.azhar_park), R.string.dummy_description,
+                R.drawable.azhar_park, (getString(R.string.dummy_opening_hours)),
                 2, "http://maps.google.com/maps?daddr=30.0406319, 31.2647327,15z"));
-        greenSpots.add(new Spot("Green 2", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
+        greenSpots.add(new Spot(getString(R.string.dummy_green_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", (getString(R.string.dummy_opening_hours)),
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 3", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
-                15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 4", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 5", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 6", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
+        greenSpots.add(new Spot(getString(R.string.dummy_green_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", (getString(R.string.dummy_opening_hours)),
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 7", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
-                15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 8", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 9", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 10", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 6 PM",
+        greenSpots.add(new Spot(getString(R.string.dummy_green_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", (getString(R.string.dummy_opening_hours)),
                 20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 11", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "10 AM : 8 PM",
-                15, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
-        greenSpots.add(new Spot("Green 12", R.string.dummy_description,
-                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", "9 AM : 5 PM",
-                10, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        greenSpots.add(new Spot(getString(R.string.dummy_green_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", (getString(R.string.dummy_opening_hours)),
+                20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
+        greenSpots.add(new Spot(getString(R.string.dummy_green_name), R.string.dummy_description,
+                "https://images.memphistours.com/large/214261814_EgyptianMuseum.jpg", (getString(R.string.dummy_opening_hours)),
+                20, "http://maps.google.com/maps?daddr=30.786416, 30.999049"));
         // Create an {@link SpotAdapter}, whose data source is a list of {@link Spot}s. The
         // adapter knows how to create list items for each item in the list.
         SpotAdapter adapter = new SpotAdapter(getActivity(), greenSpots);
