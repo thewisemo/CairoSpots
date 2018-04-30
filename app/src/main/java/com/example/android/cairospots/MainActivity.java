@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // Viewpager object
         ViewPager viewPager = findViewById(R.id.viewpager);
         // New adapter object
-        SpotFragmentPagerAdapter adapter = new SpotFragmentPagerAdapter(getSupportFragmentManager());
+        SpotFragmentPagerAdapter adapter = new SpotFragmentPagerAdapter(getSupportFragmentManager(), this);
         // Setting the FragmentPagerAdapter to the viewPager.
         viewPager.setAdapter(adapter);
         // Give the TabLayout the ViewPager

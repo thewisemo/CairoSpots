@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Cairo Spots</string>
-    <string name="museums">MUSEUMS</string>
+    <string name="historic">HISTORIC</string>
     <string name="green">GREEN</string>
     <string name="food">FOOD</string>
     <string name="play">PLAY</string>
@@ -37,4 +37,11 @@
     <string name="dummy_historic_name">Dummy Historic Name</string>
     <string name="dream_park">Dream Park</string>
     <string name="dummy_play_name">Play 2</string>
+
+    <string-array name="tabs">
+        <item>Historic</item>
+        <item>Green</item>
+        <item>Food</item>
+        <item>Play</item>
+    </string-array>
 </resources>
