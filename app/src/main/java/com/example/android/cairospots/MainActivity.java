@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -26,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         // set the support to it as an action bar.
         Toolbar toolbar = findViewById(R.id.tool_bar_bottom_view);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() !=null)
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
         // Viewpager object
         ViewPager viewPager = findViewById(R.id.viewpager);
         // New adapter object
@@ -37,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+        // Force the viewPager "with Grid View" to be setNestedScrolling
+        ViewCompat.setNestedScrollingEnabled(viewPager, true);
     }
+
     // @Override the onCreateOptionsMenu method to inflate the tool_bar_menu.xml resource for the toolbar menu THEN
     // Return super true.
     @Override
@@ -48,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Overriding the onOptionsItemSelected for the tool bar menu,
     // create a switch cases to the onOptionsItemSelected boolean value,
-    // Case for the NEW GAME Button
-    // Case for the About "App icon" Button.
+    // Case for the i "info" Button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
