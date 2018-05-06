@@ -4,6 +4,7 @@ package com.example.android.cairospots;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +68,8 @@ public class PlayFragment extends Fragment {
         // Make the {@link GridView} use the {@link SpotAdapter} we created above, so that the
         // {@link GridView} will display list items for each {@link Spot} in the grid.
         gridView.setAdapter(adapter);
+        // Force the Grid View" to be setNestedScrolling
+        ViewCompat.setNestedScrollingEnabled(gridView, true);
         //add event listener so we can handle clicks
         AdapterView.OnItemClickListener adapterViewListener = new AdapterView.OnItemClickListener() {
             //on click
