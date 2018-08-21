@@ -1,8 +1,9 @@
 # CairoSpots
 This is my 5th project "Tour Guide App" in the Google | Udacity 2017/2018 Scholarship program,
 
-I spent a very happy time dealing with CollapsingLayout & CoordinatorLayout, But I faced an issue to auto hide both the top toolbar & tabLayout while scrolling ( to give more viewable space in landscape mode too ) But after 3 days! of Googleing didn't find a way to make it right.
-But with the Udacity's reviewer suggestions I did it.
+I spent a very happy time dealing with CollapsingLayout & CoordinatorLayout, But I faced an issue to auto hide both the top toolbar & tabLayout while scrolling ( to give more viewable space in landscape mode too ), But with the Udacity's reviewer suggestions & My classroom mentor I did it!
+
+
 
 I build this project to meet these rubrics:
 
