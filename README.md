@@ -4,6 +4,9 @@ This is my 5th project "Tour Guide App" in the Google | Udacity 2017/2018 Schola
 I spent a very happy time dealing with CollapsingLayout & CoordinatorLayout, But I faced an issue to auto hide both the top toolbar & tabLayout while scrolling ( to give more viewable space in landscape mode too ), But with the Udacity's reviewer suggestions & My classroom mentor I did it!
 
 
+![forgit](https://user-images.githubusercontent.com/33489751/44407065-7ba8c600-a55d-11e8-8b7f-4e31285eddcf.png)
+
+
 
 I build this project to meet these rubrics:
 
